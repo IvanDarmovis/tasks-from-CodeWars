@@ -87,3 +87,94 @@
 // }
 
 // console.log(highAndLow("1 2 3 4 5"));
+
+// ----------------------------------------------------
+// #7 Exes and Ohs         7 kyu
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// function XO(str) {
+//   const arr = str.toLowerCase().split("");
+//   const x = arr.filter((el) => el === "x").length;
+//   const o = arr.filter((el) => el === "o").length;
+//   if (x === o) return true;
+//   return false;
+// }
+
+// ----------------------------------------------------
+// #8 Grasshopper - Summation         8 kyu
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+// var summation = function (num) {
+//   let sum = 0;
+//   for (let i = 1; i <= num; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// };
+
+// ----------------------------------------------------
+// #9 Beginner Series #3 Sum of Numbers         7 kyu
+
+// Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+// Note: a and b are not ordered!
+
+// function getSum(a, b) {
+//   const min = a >= b ? b : a;
+//   const max = a >= b ? a : b;
+//   let result = 0;
+//   for (let i = min; i <= max; i += 1) result += i;
+//   return result;
+// }
+
+// ----------------------------------------------------
+// #10 Is this a triangle?        7 kyu
+
+// Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+// (In this case, all triangles must have surface greater than 0 to be accepted).
+
+// function isTriangle(a, b, c) {
+//   const max = Math.max(a, b, c);
+//   return a + b + c - max > max;
+// }
+
+// ----------------------------------------------------
+// #11 You're a square!     7 kyu
+
+// Task
+// Given an integral number, determine if it's a square number:
+// In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+// The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+// var isSquare = function (n) {
+//   const num = Math.floor(Math.sqrt(n));
+//   return num ** 2 === n;
+// };
+
+// ----------------------------------------------------
+// #12 Find the smallest integer in the array    8 kyu
+// Given an array of integers your solution should find the smallest integer.
+
+// class SmallestIntegerFinder {
+//   findSmallestInt(args) {
+//     return Math.min(...args);
+//   }
+// }
+
+// ----------------------------------------------------
+// #13 Regex validate PIN code    7 kyu
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+// If the function is passed a valid PIN string, return true, else return false.
+
+// function validatePIN(pin) {
+//   const arr = pin.trim().split("");
+//   if (pin.length !== arr.length) return false;
+//   if (arr.length === 4 || (arr.length === 6 && pin.length === arr.length)) {
+//     for (let i = 0; i < arr.length; i += 1) {
+//       console.log(arr[i]);
+//       if (!Number(arr[i]) && Number(arr[i]) !== 0) return false;
+//     }
+//     return true;
+//   }
+//   return false;
+// }
